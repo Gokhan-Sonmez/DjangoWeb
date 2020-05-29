@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+ {% load static %}
+{% block title %} {{ setting.title  }}{% endblock %}
+{% block keywords %}{{setting.keywords  }}{% endblock %}
+{% block description %}{{ setting.description  }}{% endblock %}
+{% block favicon %}
+    {% if setting.icon %}
+     <link rel="shortcut icon" href="{{ setting.icon.url}}" type="image/png">
+    {% endif %}
+   <link rel="shortcut icon" href="{% static 'img/favicon.ico'%}" type="image/ico">
+{% endblock %}
+
+
+{% block left-sidebar %}
+    {% include "left-sidebar.html" %}
+{% endblock %}
+{% block slider %}
+    {% include "slider.html" %}
+{% endblock %}
+
+{% block content %}
+    {% include "content.html" %}
+{% endblock %}
+{% block right-sidebar %}
+    {% include "right-sidebar.html" %}
+{% endblock %}
+

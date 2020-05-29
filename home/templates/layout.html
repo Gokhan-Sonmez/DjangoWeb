@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+    <!-- Site Metas -->
+    <title>{% block title %}Anasayfa{% endblock %}</title>
+    <meta name="keywords" content="{% block keywords %}Anasayfa anahtar kelimeler{% endblock %}">
+    <meta name="description" content="{% block description %}Anasayfa anahtar kelimeler{% endblock %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+   {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <!-- FontAwesome Icons core CSS -->
+    <link href="{% static 'css/font-awesome.min.css'%}" rel="stylesheet">
+   {% block favicon %}{% endblock %}
+   {% block head %}{% endblock %}
+</head>
+<body onload="show_clock()">
+
+{% include "header.html" %}
+{% block left-sidebar %}{% endblock %}
+{% block  slider %}{% endblock %}
+{% block content %}{% endblock %}
+{% block body %}{% endblock %}
+{% block right-sidebar %}{% endblock %}
+{% include "footer.html" %}
+{% block footer %}{% endblock %}
+</body>
+</html>
